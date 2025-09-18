@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: bronze_date #  Must match the filename of a model -- including case sensitivity.
+    config:
+      materialized: view
+      schema: bronze
+  - name: bronze_sales #  Must match the filename of a model -- including case sensitivity.
+    config:
+      materialized: view
+      schema: bronze
+
+  - name: bronze_sales #  Must match the filename of a model -- including case sensitivity.
+    columns:
+      - name: sales_id
+        data_tests:
+          - not_null
+          - unique
+      - name: gross_amount
+        data_tests:
+          - not_null
+      - name: gross_amount
+        data_tests:
+          - non_negative_test
+           
+  - name: bronze_customer #  Must match the filename of a model -- including case sensitivity.
+    columns:
+      - name: customer_sk
+        data_tests:
+          - not_null
+          - unique
+  
+  - name: bronze_store #  Must match the filename of a model -- including case sensitivity.
+    columns:
+      - name: store_name
+        data_tests:
+          - accepted_values:
+                values: ['MegaMart Toronto', 'MegaMart San Jose', 'MegaMart Austin','MegaMart Brooklyn', 'MegaMart Manhattan']
+                config:
+                  severity: warn

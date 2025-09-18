@@ -1,0 +1,4 @@
+customer_id,first_name,last_name,email,phone,address,city,state,zip_code,country
+1,John,Doe,john.doe@example.com,555-1234,123 Elm St,Springfield,IL,62701,USA
+2,Jane,Smith,jane.smith@example.com,555-5678,456 Oak St,Springfield,IL,62701,USA
+3,Jim,Brown,jim.brown@example.com,555-8765,789 Pine St,Springfield,IL,62701,USA

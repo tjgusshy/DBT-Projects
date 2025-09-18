@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: source
+    database: dbt-project
+    config:
+      enabled: true
+    tables:
+      - name: fact_sales  # enabled
+      - name: fact_returns  # not enabled
+      - name: dim_customer  # not enabled
+      - name: dim_date  # enabled
+      - name: dim_product  # not enabled
+      - name: dim_store  # not enabled
+     
+      - name: item  # not enabled

@@ -1,0 +1,1 @@
+{{ test_non_negative_test(column_name="gross_amount", model=get_where_subquery(ref('bronze_sales'))) }}
