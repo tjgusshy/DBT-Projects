@@ -5,6 +5,8 @@ This project implements a dbt pipeline for transforming and modeling the MovieLe
 
 ### Tech Stack: AWS S3, DBT Core, Snowflake.
 
+### Architecture
+
 <img width="1278" height="794" alt="image" src="https://github.com/user-attachments/assets/650aca45-12c3-4b70-a783-87772f1d02c1" />
 
 
